@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us - Scam Shield</title>
+
+<style>
+
+body{
+margin:0;
+font-family:'Segoe UI',sans-serif;
+background:#08111f;
+color:white;
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 60px;
+background:#0f172a;
+}
+
+.logo{
+font-size:28px;
+font-weight:bold;
+color:#38bdf8;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+margin:0;
+padding:0;
+}
+
+nav ul li{
+margin-left:25px;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+transition:.3s;
+}
+
+nav ul li a:hover{
+color:#38bdf8;
+}
+
+.container{
+max-width:800px;
+margin:auto;
+padding:50px 20px;
+}
+
+.card{
+background:#132238;
+padding:35px;
+border-radius:15px;
+box-shadow:0 0 15px rgba(0,0,0,0.4);
+}
+
+h1{
+text-align:center;
+color:#38bdf8;
+margin-bottom:10px;
+}
+
+.subtitle{
+text-align:center;
+color:#d1d5db;
+margin-bottom:30px;
+line-height:1.6;
+}
+
+label{
+display:block;
+margin-top:20px;
+margin-bottom:8px;
+font-weight:bold;
+}
+
+input,textarea{
+width:100%;
+padding:15px;
+border:none;
+border-radius:10px;
+font-size:16px;
+font-family:'Segoe UI',sans-serif;
+box-sizing:border-box;
+}
+
+textarea{
+height:150px;
+resize:vertical;
+}
+
+button{
+margin-top:25px;
+padding:15px 35px;
+background:#38bdf8;
+color:black;
+border:none;
+border-radius:10px;
+font-weight:bold;
+font-size:16px;
+cursor:pointer;
+transition:.3s;
+}
+
+button:hover{
+background:#0ea5e9;
+}
+
+#message{
+margin-top:20px;
+font-size:18px;
+font-weight:bold;
+text-align:center;
+}
+
+.contact-info{
+margin-top:40px;
+padding-top:25px;
+border-top:1px solid #334155;
+}
+
+.contact-info h2{
+color:#38bdf8;
+}
+
+.contact-info p{
+line-height:1.8;
+color:#d1d5db;
+}
+
+footer{
+background:#0f172a;
+padding:20px;
+text-align:center;
+margin-top:50px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">
+Scam Shield
+</div>
+
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="scam checker.html">Scam Checker</a></li>
+<li><a href="tips.html">Tips</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+
+</nav>
+
+<div class="container">
+
+<div class="card">
+
+<h1>Contact Us</h1>
+
+<p class="subtitle">
+Have a question, suggestion or feedback? We'd love to hear from you.
+Fill out the form below and we'll get back to you as soon as possible.
+</p>
+
+<label>Full Name</label>
+<input type="text" id="name" placeholder="Enter your name">
+
+<label>Email Address</label>
+<input type="email" id="email" placeholder="Enter your email">
+
+<label>Your Message</label>
+<textarea id="feedback" placeholder="Type your message here..."></textarea>
+
+<button onclick="sendMessage()">
+Send Message
+</button>
+
+<div id="message"></div>
+
+<div class="contact-info">
+
+<h2>Contact Information</h2>
+
+<p>
+📧 Email: support@scamshield.com
+</p>
+
+<p>
+🌐 Website: www.scamshield.com
+</p>
+
+<p>
+🕒 Support Hours: Monday - Friday | 9:00 AM - 6:00 PM
+</p>
+
+<p>
+📍 Cybersecurity Awareness 
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<footer>
+<p>© 2026 Scam Shield | Cybersecurity</p>
+</footer>
+
+<script>
+
+function sendMessage(){
+
+let name=document.getElementById("name").value.trim();
+let email=document.getElementById("email").value.trim();
+let feedback=document.getElementById("feedback").value.trim();
+
+if(name=="" || email=="" || feedback==""){
+
+document.getElementById("message").style.color="orange";
+document.getElementById("message").innerHTML="⚠ Please fill in all the fields.";
+
+return;
+
+}
+
+document.getElementById("message").style.color="lightgreen";
+document.getElementById("message").innerHTML="✅ Thank you for contacting Scam Shield! Your message has been received.";
+
+document.getElementById("name").value="";
+document.getElementById("email").value="";
+document.getElementById("feedback").value="";
+
+}
+
+</script>
+
+</body>
+</html>
+
